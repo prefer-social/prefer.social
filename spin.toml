@@ -30,7 +30,7 @@ route = "/.well-known/..."
 component = "well-known"
 
 [component.well-known]
-source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/well_known.wasm", digest = "sha256:" }
+source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/well_known.wasm", digest = "sha256:e6face7a6698ec2d1c6544ae56c2e634c760f3fea2fe0ad3eb93d90a3792d53b" }
 sqlite_databases = ["default"]
 allowed_outbound_hosts = []
 files = [{ source = "well-known/static", destination = "/" }]
@@ -40,7 +40,7 @@ route = "/..."
 component = "web"
 
 [component.web]
-source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/web.wasm", digest = "sha256:" }
+source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/web.wasm", digest = "sha256:1e6d89a623fd83e5b421e7ace6ca3c2dbc05ae9ffcd43f4e28f6567ed680d816" }
 sqlite_databases = ["default"]
 allowed_outbound_hosts = ["https://*:*", "http://*:*"]
 
@@ -49,7 +49,7 @@ route = "/api/v1/..."
 component = "api-v1"
 
 [component.api-v1]
-source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/api_v1.wasm", digest = "sha256:" }
+source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/api_v1.wasm", digest = "sha256:c38adccc23785c08004ef361e54e3e8eac8da1b8d75df7ab836c81b52e3d3e80" }
 allowed_outbound_hosts = [
     "https://*:*",
     "redis://{{ redis_host }}:{{ redis_port }}",
@@ -74,7 +74,7 @@ route = "/api/v2/..."
 component = "api-v2"
 
 [component.api-v2]
-source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/api_v2.wasm", digest = "sha256:" }
+source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/api_v2.wasm", digest = "sha256:6001018cf83a0dfc9924069346971d42ff6ae5f3d52d0419a0ad7ea0e08b2b19" }
 allowed_outbound_hosts = [
     "https://*:*",
     "redis://{{ redis_host }}:{{ redis_port }}",
@@ -99,7 +99,7 @@ route = "/oauth/..."
 component = "oauth"
 
 [component.oauth]
-source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/oauth.wasm", digest = "sha256:" }
+source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/oauth.wasm", digest = "sha256:11dbe34c55c3efb61a1707e531f8fb2341f4b56a4f9475ca4223c4847928535f" }
 allowed_outbound_hosts = ["https://*:*"]
 sqlite_databases = ["default"]
 
@@ -108,7 +108,7 @@ channel = "{{ redis_channel }}"
 component = "postbox"
 
 [component.postbox]
-source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/postbox.wasm", digest = "sha256:" }
+source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/postbox.wasm", digest = "sha256:2fb950cadef13cf8f841b88b142f95bc890bdcfef17f44dd4dda8795fee59b9d" }
 allowed_outbound_hosts = [
     "https://*:*",
     "http://*:*",
