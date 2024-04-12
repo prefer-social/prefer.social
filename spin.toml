@@ -33,7 +33,6 @@ component = "well-known"
 source = { url = "https://github.com/prefer-social/prefer.social/releases/latest/download/well_known.wasm", digest = "sha256:e6face7a6698ec2d1c6544ae56c2e634c760f3fea2fe0ad3eb93d90a3792d53b" }
 sqlite_databases = ["default"]
 allowed_outbound_hosts = []
-files = [{ source = "well-known/static", destination = "/" }]
 
 [[trigger.http]]
 route = "/..."
