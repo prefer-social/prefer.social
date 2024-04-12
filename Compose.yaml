@@ -1,0 +1,32 @@
+services:
+  app:
+    build:
+      context: .
+      ssh:
+        - default
+      dockerfile_inline: |
+        FROM scratch
+        COPY spin.toml /spin.toml
+        ENTRYPOINT ["/spin.toml"]
+      platforms:
+        - "wasi/wasm32"
+    platform: wasi/wasm32
+    runtime: io.containerd.spin.v2
+    env_file: ./.env
+    volumes:
+      - .spin:/.spin
+      - assets:/assets
+    ports:
+      - 3000:8080
+  redis:
+    image: redis:7.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server 
+
+
+
+
+# docker build --platform=wasi/wasm32 --provenance=false -t hello_spin_docker:6 --load -f Containerfile .
+# docker run --runtime=io.containerd.spin.v2 --platform wasi/wasm32 hello_spin_docker:6
